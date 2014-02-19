@@ -4,7 +4,7 @@ Do not use this in production. This package is just a concept and is not tested 
 class Post extends Model
 {
     protected $fields = array
-	(
+    (
 		'title' => 'required|fillable|unique|max:100',
 		'slug'  => 'required|unique',
 		'body'  => 'required|fillable'
@@ -30,6 +30,29 @@ Route::get('post/new', function()
 * `$post->save()` will trigger the validation.
 * If validation fails the `save()` will fail too.
 * `$post->errors()` will give you the error messages.
+
+## Instalation
+
+* Require `deiucanta/validation` into your `composer.json` file
+
+    ```
+"require": {
+	"laravel/framework": "4.1.*",
+	"deiucanta/validation": "dev-master"
+}
+```
+
+* Update composer from Terminal
+
+    `composer update`
+
+* Add the service provider into `app/config/app.php`
+
+    `'Deiucanta\Validation\ValidationServiceProvider'`
+
+* Add the `Model` alias into `app/config/app.php`
+
+    `'Model' => 'Deiucanta\Validation\Model'`
 
 # Model / Input Validation
 
