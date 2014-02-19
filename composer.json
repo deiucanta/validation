@@ -1,0 +1,22 @@
+{
+    "name": "deiucanta/validation",
+    "description": "",
+    "authors": [
+        {
+            "name": "Andrei Canta",
+            "email": "canta.andrei@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.x",
+        "illuminate/database": "4.1.x",
+        "illuminate/validation": "4.1.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Deiucanta\\Validation": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
